@@ -14,4 +14,4 @@ fsutil behavior set disable8dot3 1
 
 Use dir /x to get a listing.
 
-Powershell is required to broacast the change, so the next time you open a cmd prompt the changes will be there.
+Powershell is required to broadcast the change, so the next time you open a cmd prompt the changes will be there.
