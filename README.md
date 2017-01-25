@@ -4,7 +4,7 @@ You can check if short names are enabled with:
 
 fsutil 8dot3name query
 
-Although it's a good idea to disable 8dot3name because it will bring things to a crawl if you have folders with 1000's of files, you can manually give folders short names like this:
+Since it's a good idea to disable 8dot3name because it will bring things to a crawl if you have folders with 1000's of files, you can manually give folders short names like this:
 
 fsutil behavior set disable8dot3 0
 
