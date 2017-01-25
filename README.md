@@ -1,5 +1,7 @@
 A batch file to shorten long PATH environment variable by using short names.
 
+Requires cmd to be run as Administrator.
+
 You can check if short names are enabled with:
 
 fsutil 8dot3name query
