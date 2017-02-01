@@ -28,15 +28,7 @@ exit /b
 
     for /F "usebackq skip=2 tokens=2*" %%A IN (`reg query %1 /v Path`) do (
         set mypath=%%B
-        set mypath=!mypath: =æ!     &rem Alt-145
-        set mypath=!mypath:^)=Æ!    &rem Alt-146
-
-        for %%N in (!mypath!) do (
-            set afolder=%%N
-            set afolder=!afolder:æ= !
-            set afolder=!afolder:Æ=^)!
-            call :shorten "!afolder!"
-        )
+        call :shortenpathsub
     )
 
     exit /b
@@ -46,6 +38,11 @@ exit /b
     set semi=
 
     set mypath=%path%
+    call :shortenpathsub
+
+    exit /b
+
+:shortenpathsub
     set mypath=!mypath: =æ!     &rem Alt-145
     set mypath=!mypath:^)=Æ!    &rem Alt-146
 
